@@ -14,12 +14,12 @@ https://cloud.google.com/security/products/armor?hl=en
 - mask values ,IPv4,  which of the four octets (8, 16, 24, 32 bits)
  
 - True-Client-IP header ||  X-Forwarded-For header
- 
+```
 <ValidateBasedOn>X_FORWARDED_FOR_ALL_IP</ValidateBasedOn>
 1)X_FORWARDED_FOR_ALL_IP (default)
 2)X_FORWARDED_FOR_FIRST_IP
 3)X_FORWARDED_FOR_LAST_IP
-
+```
 <ClientIPVariable>FLOW_VARIABLE</ClientIPVariable>
   
 <IgnoreTrueClientIPHeader>true</IgnoreTrueClientIPHeader>
@@ -204,6 +204,7 @@ Basepath |Path [request path (minus the basepath)] | Verb | Request/response bod
 15.SpikeArrest policy
 - protects against traffic surges with the <Rate> element
 - difference between SpikeArrest and Quota
+```
 - a)spike arrest- denieal of service, bot detection, traffic shaping(backends load handling capacity),
 - b)quota -suscription, uasage x transactions per day, metering
 -combined use case example of [platinum(5k req/month) & gold(4k req/month) customer --> what if platinum hits all req on same day]
@@ -214,6 +215,7 @@ Basepath |Path [request path (minus the basepath)] | Verb | Request/response bod
 - Traffic management is a spiked arrest policy use case, while metering is a quota policy use case.
 - Both policies may be needed for a customer with different levels of access to transactions, such as a gold and platinum customer.
 - The spiked arrest policy can be used to prevent the platinum customer from overwhelming the system with all of their transactions at once.
+```
 
 ```xml
 <SpikeArrest name="Spike-Arrest-1">
@@ -231,7 +233,7 @@ Basepath |Path [request path (minus the basepath)] | Verb | Request/response bod
 - [Conditions reference](https://cloud.google.com/apigee/docs/api-platform/reference/conditions-reference)
  
 - [Flow variables reference](https://cloud.google.com/apigee/docs/api-platform/reference/variables-reference)
-- 
+  
 - apigee.metrics.policy.policy_name.timeTaken --> can setup alerts for chances of failures ahead of time.
 eg: JS timout | as code gets added with new requirements, JS prcessing time increases.
 we just add implementation never consider possibility of failures. 
@@ -243,7 +245,7 @@ alearting can be implemented if time taken by particular policy is increasing ce
 route.name:The name of the <RouteRule> that was executed in the ProxyEndpoint.
 route.target:The name of the TargetEndpoint that was executed.
 
-- <PostClientFlow> usage
+- PostClientFlow usage
 
 - request & response flow in apigee
 
