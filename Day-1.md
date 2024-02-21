@@ -19,11 +19,11 @@ https://cloud.google.com/security/products/armor?hl=en
 1)X_FORWARDED_FOR_ALL_IP (default)
 2)X_FORWARDED_FOR_FIRST_IP
 3)X_FORWARDED_FOR_LAST_IP
-```
+
 <ClientIPVariable>FLOW_VARIABLE</ClientIPVariable>
   
 <IgnoreTrueClientIPHeader>true</IgnoreTrueClientIPHeader>
- 
+```
 - set up a load balancer in front of your Kubernetes cluster
 
 ---
@@ -286,6 +286,7 @@ Updating the mask configuration in an environment using the -API/organizations/{
 - [Using GraphQL](https://cloud.google.com/apigee/docs/api-platform/develop/graphql)
 
 - [Streaming requests and responses](https://cloud.google.com/apigee/docs/api-platform/develop/enabling-streaming)
+```
 -By default, HTTP streaming is disabled and HTTP request and response payloads are written to a buffer in memory before they are processed by the API proxy pipeline.
 -handles very large requests and/or responses
 -for non-streamed:Message payload size is restricted to 10 MB. 
@@ -296,24 +297,26 @@ HTTPProxyConnection & HTTPTargetConnection
       <Property name="response.streaming.enabled">true</Property>
       <Property name="request.streaming.enabled">true</Property>
 alternate: Signed URL Generator
-
+```
 
 - [WebSockets](https://cloud.google.com/apigee/docs/api-platform/develop/websocket-config)
+```
 -web interactions need to happen in real time, such as gaming, communications, financial transactions, and other high-throughput activities.
 [websocket-sample](https://github.com/srinandan/websocket-sample)
 -protocol that provides a full-duplex communications channel between a web client and web server over a single TCP connection
 -Upgrade request header
 -101 Switching Protocols
 -only use the Verify API Key and OAuthV2 
-
+```
 
 - [create a Java callout](https://cloud.google.com/apigee/docs/api-platform/develop/how-create-java-callout)
+```
 manipulating request or response messages
 Getting and setting flow variables.
 Calling external services
 Raising faults
 Manipulating error messages and status codes
-
+```
 - [Integrating with Contact Center AI](https://cloud.google.com/apigee/docs/api-platform/develop/integrating-apigee-contact-center-ai)
 
 - [Performing health checks](https://cloud.google.com/apigee/docs/api-platform/debug/health-check)
