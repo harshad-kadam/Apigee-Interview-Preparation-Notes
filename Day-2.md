@@ -287,15 +287,202 @@ API Debugging: Capture detailed error messages and request data to diagnose and 
 These are just a glimpse into the diverse possibilities of the Apigee DataCapture policy. By understanding your specific needs and data requirements, you can unlock valuable insights and enhance your API ecosystem in various ways. Remember, the chosen use case will determine the specific data points you capture and how you utilize them for your business success.
 ```
 ---
+10. ExtractVariables policy
+```xml
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Variables-1">
+   <DisplayName> 1</DisplayName>
+   <Source clearPayload="true|false">request</Source>
+   <VariablePrefix>myprefix</VariablePrefix>
+   <IgnoreUnresolvedVariables>true|false</IgnoreUnresolvedVariables>
+   <URIPath>
+      <Pattern ignoreCase="false">/accounts/{id}</Pattern>
+   </URIPath>
+   <QueryParam name="code">
+      <Pattern ignoreCase="true">DBN{dbncode}</Pattern>
+   </QueryParam>
+   <Header name="Authorization">
+      <Pattern ignoreCase="false">Bearer {oauthtoken}</Pattern>
+   </Header>
+   <FormParam name="greeting">
+      <Pattern>hello {user}</Pattern>
+   </FormParam>
+   <Variable name="request.content">
+       <Pattern>hello {user}</Pattern>
+   </Variable>
+   <JSONPayload>
+      <Variable name="name">
+         <JSONPath>{example}</JSONPath>
+      </Variable>
+   </JSONPayload>
+   <XMLPayload stopPayloadProcessing="false">
+      <Namespaces/>
+      <Variable name="name" type="boolean">
+         <XPath>/test/example</XPath>
+      </Variable>
+   </XMLPayload>
+</ExtractVariables>
+```
 ---
----
----
----
----
----
----
----
----
----
----
+11. Apigee Integration policies
+- SetIntegrationRequest policy 
+```
+The SetIntegrationRequest policy lets you create a request object for an integration that you want to run. In the policy, you must configure the details of the API trigger and the input parameters required to run the integration. When you run the SetIntegrationRequest policy, it creates a request object and saves it in a flow variable. The request object has all the information required to run the integration. At this stage, the integration is still not run. To run the integration, you must either call the IntegrationCallout policy or set an IntegrationEndpoint. Both the IntegrationCallout policy and IntegrationEndpoint require the request object to run the integration.
 
+<SetIntegrationRequest continueOnError="false" enabled="true" name="Set-Integration-Request">
+  <DisplayName>Set Integration Request Policy</DisplayName>
+  <ProjectId ref="my_projectid_var">apigee_staging_1</ProjectId>
+  <IntegrationName ref="my_integration_ref">integration_1</IntegrationName>
+  <IntegrationRegion ref="my_integration_ref">asia-east1</IntegrationRegion>
+  <ApiTrigger ref="my_api_trigger_ref">API-Trigger-2</ApiTrigger>
+  <ScheduleTime>2022-01-15T01:30:15Z</ScheduleTime>
+  <Parameters>
+    <Parameter name="my_str_param" type="string" ref="flow_var_1">someText</Parameter>
+    <ParameterArray name="my_array_param" type="integer" ref="flow_var_2">
+      <Value ref="flow_var_3">1</Value>
+      <Value ref="flow_var_4">2</Value>
+      <Value ref="flow_var_5">3</Value>
+    </ParameterArray>
+  </Parameters>
+  <Request>my_request_var</Request>
+</SetIntegrationRequest>
+```
+- Integration Callout Policy
+```
+The IntegrationCallout policy lets you run an Apigee integration that has an API trigger. However, before running an integration, you must run the SetIntegrationRequest policy. The SetIntegrationRequest policy creates a request object and makes the object available to the IntegrationCallout policy as a flow variable. The request object has the integration details such as the API trigger name, integration project ID, integration name, and other details configured in the SetIntegrationRequest policy. The IntegrationCallout policy uses the flow variable of the request object to run the integration. You can configure the IntegrationCallout policy to save the integration run response in a flow variable.
+The IntegrationCallout policy is helpful if you want to run integration in the middle of your proxy flow. Alternately, instead of configuring the IntegrationCallout policy, you can also run an integration by specifying an integration endpoint as your target endpoint. For more information, see IntegrationEndpoint.
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<IntegrationCallout continueOnError="false" enabled="true" name="Integration-Callout">
+  <DisplayName>Integration-Callout-1</DisplayName>
+  <AsyncExecution>true</AsyncExecution>
+  <Request clearPayload="true">my_request_flow_var</Request>
+  <Response>my_response_flow_var</Response>
+</IntegrationCallout>
+```
+---
+12. JavaCallout policy 
+```
+-Enables you to use Java to implement custom behavior that is not included out-of-the-box by Apigee policies. In your Java code, you can access message properties (headers, query parameters, content) and flow variables in the proxy flow. If you're just getting started with this policy, see How to create a Java callout.
+-Supported Java versions include: Oracle JDK 11 and OpenJDK 11
+-apigee applies Java permissions policies to Java Callout code
+-will fail if it violates permissions
+-[Javadoc for writing Java Callout code](https://github.com/apigee/api-platform-samples/tree/master/docs/javadocs-javacallout)
+
+<JavaCallout async="false" continueOnError="false" enabled="true" name="JavaCallout">
+    <DisplayName>JavaCallout</DisplayName>
+    <ClassName>com.example.mypolicy.MyJavaCallout</ClassName>
+    <ResourceURL>java://MyJavaCallout.jar</ResourceURL>
+    <Properties>
+        <Property name="source">response.status.code</Property>
+    </Properties>
+</Javascript>
+
+Java code, implement the following constructor
+public class MyJavaCallout implements Execution{
+    public MyJavaCallout(Map<string, string> props){
+        
+            // Extract property values from map.
+    }
+    ...
+}
+```
+---
+13. JavaScript policy 
+- error handling logics
+- processing of request/response object
+- things those are not provided by apigee inbuilt policies
+- timeout / try-catch use / cryptographic functions
+- dynamically edit flow behaviours
+- One use case don't recommend for the JavaScript policy is logging 
+- print() to debug
+```
+<DisplayName>JavaScript 1</DisplayName>
+    <Properties>
+        <Property name="propName">propertyValue</Property>
+    </Properties>
+    <SSLInfo>
+        <Enabled>trueFalse</Enabled>
+        <ClientAuthEnabled>trueFalse</ClientAuthEnabled>
+        <KeyStore>ref://keystoreRef</KeyStore>
+        <KeyAlias>keyAlias</KeyAlias>
+        <TrustStore>ref://truststoreRef</TrustStore>
+    </SSLInfo>
+    <IncludeURL>jsc://a-javascript-library-file</IncludeURL>
+    <ResourceURL>jsc://my-javascript-source-file</ResourceURL>
+    <Source>insert_js_code_here</Source>
+```
+---
+14. JSONThreatProtection policy 
+- Minimizes the risk posed by content-level attacks 
+- specify limits on various JSON structures, such as arrays and strings.
+```xml
+<JSONThreatProtection async="false" continueOnError="false" enabled="true" name="JSON-Threat-Protection-1">
+   <DisplayName>JSONThreatProtection 1</DisplayName>
+   <ArrayElementCount>20</ArrayElementCount>
+   <ContainerDepth>10</ContainerDepth>
+   <ObjectEntryCount>15</ObjectEntryCount>
+   <ObjectEntryNameLength>50</ObjectEntryNameLength>
+   <Source>request</Source>
+   <StringValueLength>500</StringValueLength>
+</JSONThreatProtection>
+```
+---
+15. JWS and JWT policies
+- generate | verify | decode
+- Both JWS and JWT are commonly used to share claims or assertions between connected applications.
+- the value of a claim (JWT) or header (JWS/JWT) from within the JWS/JWT must be known before verifying the JWS/JWT.
+```
+header.payload.signature
+- JWS/JWT policy creates all three parts.
+header..signature
+- JWS also supports a detached format that omits the payload from the JWS
+-The Verify JWS policy then verifies the JWS by using the header and signature in the JWS and the payload specified by the <DetachedContent> element.
+
+* Differences between JWS and JWT
+-JWT
+The payload is always a JSON object
+The payload is always attached to the JWT
+The typ header of the token is always set to JWT
+-JWS
+The payload can be represented by any format, such as a JSON object, byte stream, octet stream, and others
+The payload does not have to be attached to the JWS
+```
+```xml
+- GenerateJWT:
+If you use the <Algorithm> element, the policy generates a signed JWT.
+If you use the <Algorithms> element, the policy generates an encrypted JWT.
+
+<GenerateJWT name="JWT-Generate-HS256">
+    <DisplayName>JWT Generate HS256</DisplayName>
+	<-------------------!>
+    <Type>Signed</Type>
+    <Algorithm>HS256</Algorithm>
+	<-------------------!>
+	<Type>Encrypted</Type>
+	<Algorithms>
+		<Key>RSA-OAEP-256</Key>The key is encrypted with the RSA-OAEP-256 algorithm.
+		<Content>A128GCM</Content>The content is encrypted with the A128GCM algorithm.
+	</Algorithms>
+	<-------------------!>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <SecretKey>
+        <Value ref="private.secretkey"/>
+        <Id>1918290</Id>
+    </SecretKey>
+    <ExpiresIn>1h</ExpiresIn>
+    <Subject>monty-pythons-flying-circus</Subject>
+    <Issuer>urn://apigee-JWT-policy-test</Issuer>
+    <Audience>fans</Audience>
+    <Id/>
+    <AdditionalClaims>
+        <Claim name="show">And now for something completely different.</Claim>
+    </AdditionalClaims>
+    <OutputVariable>jwt-variable</OutputVariable>
+</GenerateJWT>
+```
+---
+16. KeyValueMapOperations policy
+- PUT, GET, or DELETE operations
+- use cases: versioning, credentials store, url store
+- scopes
+---
