@@ -29,6 +29,51 @@
     </AdditionalClaims>
 </VerifyJWT>
 ```
+- [explain how it works  internally](https://www.youtube.com/watch?v=p_sDlCyzUFU)
+- [Using a JSON Web Key Set (JWKS) to verify a JWT](https://cloud.google.com/apigee/docs/api-platform/reference/policies/jwt-policies-overview#usingajsonwebkeysetjwkstoverifyajwt).
+- [JWKS](https://datatracker.ietf.org/doc/html/rfc7517)
+
+```
+<Audience>
+<AdditionalClaims>
+<AdditionalHeaders>
+<IgnoreCriticalHeaders>
+<KnownHeaders>
+<MaxLifespan>
+<JWKS>
+```
+---
+2. XMLtoJSON policy 
+```
+- use cases 
+1] complex xml processing in javascript 
+2] access entity response conversion and then attributes processing
+<XMLToJSON async="false" continueOnError="false" enabled="true" name="XML-to-JSON-1">
+    <DisplayName>XML to JSON 1</DisplayName>
+    <Source>response</Source>
+    <OutputVariable>response</OutputVariable>
+    <Options>
+        <RecognizeNumber>true</RecognizeNumber>
+        <RecognizeBoolean>true</RecognizeBoolean>
+        <RecognizeNull>true</RecognizeNull>
+        <NullValue>NULL</NullValue>
+        <NamespaceBlockName>#namespaces</NamespaceBlockName>
+        <DefaultNamespaceNodeName>&</DefaultNamespaceNodeName>
+        <NamespaceSeparator>***</NamespaceSeparator>
+        <TextAlwaysAsProperty>true</TextAlwaysAsProperty>
+        <TextNodeName>TEXT</TextNodeName>
+        <AttributeBlockName>FOO_BLOCK</AttributeBlockName>
+        <AttributePrefix>BAR_</AttributePrefix>
+        <OutputPrefix>PREFIX_</OutputPrefix>
+        <OutputSuffix>_SUFFIX</OutputSuffix>
+        <StripLevels>2</StripLevels>
+        <TreatAsArray>
+            <Path unwrap="true">teachers/teacher/studentnames/name</Path>
+        </TreatAsArray>
+    </Options>
+    <Format>yahoo</Format>
+</XMLToJSON>
+```
 ---
 
 ---
