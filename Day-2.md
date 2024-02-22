@@ -75,7 +75,48 @@
 </XMLToJSON>
 ```
 ---
+3. AccessEntity policy 
+```
+- access profiles for the following entities:
+App
+API product
+Consumer key
+Developer
 
+- Apigee keeps the entities in cache for a minimum of 180 seconds after the entities are accessed.
+
+- [Supported entity types and identifiers](https://cloud.google.com/apigee/docs/api-platform/reference/policies/access-entity-policy#Entities)
+
+- use cases
+dynamic behavior, such as conditional endpoint routing, flow execution, policy enforcement.
+permission validations 
+JAVA microservices customized behaviour based on different api products[visibleToUIApplication]
+get entity profile data as XML (or JSON in Apigee hybrid)
+```
+```xml
+<AccessEntity name="GetDeveloperProfile">  || <Source>AccessEntity.GetDeveloperProfile</Source>--> extract var source
+  <!-- This is the type entity whose profile we need to pull from the Apigee datastore. -->
+  <EntityType  value="developer"/>
+  <!-- We tell the policy to use the API key (presented as query parameter) to identify the developer. -->
+  <EntityIdentifier ref="request.queryparam.apikey" type="consumerkey"/> 
+  <SecondaryIdentifier ref="secondary_identifier" type="identifier_type"/>
+</AccessEntity>
+```
+---
+4. AssignMessage policy usage 
+- set error messages/ req & res overrring / verb overriding
+- headers/ formparams/ queryparams modification
+- set variables in flow | use UUID/xerex/base64encode kinda functions
+- add/ copy/ remove/ set /AssignTo /AssignVariable
+- remove pathsuffix/ authorization data from being sent to target
+---
+5. BasicAuthentication policy
+- alternatively can be done in python policy
+- not recomended for sensitive data sharing connection establishment
+- Basic Base64EncodedString, Authorization header
+- operation encode/decode
+- inbound | outbound(store username password in encrypted KVM)
+---
 ---
 ---
 ---
