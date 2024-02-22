@@ -10,7 +10,7 @@
 2. Explain REST
 - REST (REpresentational State Transfer) itself is not a protocol, but an architectural style for designing APIs. Here's a breakdown of key concepts related to REST:
 
-|REST Principles:|
+|REST Principles/Components:|
 |:------------|
 |- Client-Server: Applications interact as clients and servers.|
 |- Statelessness: Each request contains all necessary information, independent of past requests.|
@@ -50,6 +50,18 @@
 |-- REST is a good choice for most web-based APIs due to its simplicity and scalability.|
 |-- Other protocols like SOAP or gRPC might be better suited for specific scenarios.|
 ---
+3.
+|What is oauth2?|
+|:------------|
+|OAuth 2.0 is an open standard for authorization that allows users to share their private resources (e.g. data, files, videos) stored on one site, with another site without having to share their credentials, typically a username and password. It allows a user to grant a third-party application access to their resources on an HTTP service, without sharing their credentials.| 
+|OAuth 2.0 is an authorization framework that enables a third-party application to obtain limited access to an HTTP service. It works by allowing the user to grant a third-party application access to their resources on an HTTP service without sharing their credentials. Instead, the user is given a token that the third-party application can use to access the resources on their behalf.|
+|OAuth 2.0 is widely used for authentication and authorization by many popular websites and applications such as Google, Facebook, Twitter, Microsoft, and many more.|
+|There are several different "grant types" in OAuth 2.0, each of which is used in different situations:|
+- Authorization code: used for server-side web applications
+- Implicit: used for client-side web applications
+- Resource owner password credentials: used for trusted clients
+- Client credentials: used for client authentication
+- Refresh token: used to refresh an expired access token
 ---
 ---
 ---
