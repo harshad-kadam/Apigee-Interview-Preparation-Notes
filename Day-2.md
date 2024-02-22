@@ -1,3 +1,5 @@
+# Apigee-Interview-Preparation-Notes DAY 1
+---
 1. What is JWT ?
 - JWT, or JSON Web Token, is a method used for transferring claims between two parties for authorization purposes.
 - header, payload, and signature
@@ -27,4 +29,17 @@
     </AdditionalClaims>
 </VerifyJWT>
 ```
+---
+
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
 
