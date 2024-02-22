@@ -149,15 +149,89 @@ Improves security by eliminating the risk of stolen authorization codes.
 Drawbacks:
 Slightly more complex than the standard Authorization Code Grant.
 ```
----
----
+```
+Choosing the Right Grant Type:
 
----
----
+The best grant type depends on your specific needs and security requirements.
+Consider factors like:
+Application type: Web, mobile, server-side, etc.
+Security level required: How sensitive are the resources being accessed?
+User experience: How seamless should the authorization flow be?
 
+By understanding different grant types and their strengths and weaknesses, you can make informed decisions about securing your APIs and protecting user data.
+```
 ---
 ---
+5.
+| difference between oauth 1.0 and oauth 2.0|
+|:---------------------------|
+- Signature Method: OAuth 1.0 uses a signature method to ensure the authenticity of requests, while OAuth 2.0 relies on transport-layer security (TLS) to ensure the authenticity of requests.
+- Token types: OAuth 1.0 has two token types: request tokens and access tokens. OAuth 2.0 has several token types such as Bearer tokens, MAC tokens, and JWT tokens.
+- Access token format: OAuth 1.0 access tokens are unique, cryptographically signed strings. OAuth 2.0 access tokens can be of any format, but are typically JSON Web Tokens (JWT).
+- Token expiration: OAuth 1.0 access tokens never expire, while OAuth 2.0 access tokens have a finite lifetime and can be refreshed.
+- Token storage: OAuth 1.0 tokens are stored in the client, while OAuth 2.0 tokens can be stored in the client or on the server.
+- Flow: OAuth 1.0 is more complex and has a multi-step flow for obtaining an access token. OAuth 2.0 has a simplified flow and is more flexible.
+- Security: OAuth 1.0 is considered less secure than OAuth 2.0 because it uses a signature method which is vulnerable to replay attacks and other types of attacks. OAuth 2.0 is considered more secure because it uses transport-layer security (TLS) to encrypt the communication.
+- Support: OAuth 1.0 is being phased out and support for it is being dropped by many providers. OAuth 2.0 is widely supported across the industry and is recommended for new projects.
+---
+---
+6.
+|Difference between apigee x & apigee edge|
+|:-----------------|
+- Apigee X is a cloud-native
+```
+Availability:
+Apigee X: Currently available for new purchase and actively supported by Google Cloud.
+Apigee Edge: No longer available for new purchase, but existing users are still supported until March 31, 2025.
 
+Deployment:
+Apigee X: Deployed only on Google Cloud Platform (GCP).
+Apigee Edge: Could be deployed on GCP or on-premises using Apigee OPDK.
+
+Management:
+Apigee X: Fully managed by Google Cloud, including platform updates and infrastructure.
+Apigee Edge: Could be managed by Google Cloud (SaaS) or self-managed on-premises (OPDK).
+
+Features:
+Apigee X: Offers newer features and enhancements not available in Edge.
+Apigee Edge: May lack some newer features, but benefits from a stable platform with long-term support.
+
+Pricing:
+Apigee X: Charged based on usage and selected features.
+Apigee Edge: Fixed subscription fee for on-premises deployments, pay-as-you-go for SaaS model.
+Migration:
+
+Google recommends migrating to Apigee X from Edge to benefit from the latest features and ongoing support.
+Tools and resources are available to assist with migration.
+
+Choosing between Apigee X and Edge:
+If you are a new user: Choose Apigee X for access to the latest features and full Google Cloud management.
+If you are an existing Edge user: Evaluate your needs and migration costs before deciding to migrate to X. Consider factors like feature requirements, budget, and migration complexity.
+Additional Resources:
+
+Apigee X vs Apigee Edge: https://www.googlecloudcommunity.com/gc/Apigee/Apigee-X-vs-Apigee-Edge-both-supported-by-Google-what-are-the/m-p/425917
+Apigee Edge documentation: https://docs.apigee.com/api-platform/reference/extensions/google-cloud-storage/google-cloud-storage-extension-120
+Apigee X documentation: https://cloud.google.com/apigee/docs
+Apigee migration resources: https://m.youtube.com/watch?v=ztjXG2_9iaw
+```
 ---
 ---
+7.
+|More often seen Http status codes|
+|:-----------------|
+|200 OK: This code indicates that the request was successful and the requested resource has been returned.|
+|201 Created: This code indicates that a new resource has been successfully created in response to a POST request.|
+|204 No Content: This code indicates that the request was successful but there is no content to return.|
+|400 Bad Request: This code indicates that the request was malformed or invalid. The client should not repeat the request without modification.|
+|401 Unauthorized: This code indicates that the request requires authentication and the client has not provided valid credentials.|
+|403 Forbidden: This code indicates that the client does not have permission to access the requested resource.|
+|404 Not Found: This code indicates that the requested resource could not be found.|
+|429 Too Many Requests: This code indicates that the user has sent too many requests in a given amount of time.|
+|500 Internal Server Error: This code indicates that an error occurred on the server while processing the request.|
+|503 Service Unavailable: This code indicates that the server is currently unable to handle the request due to maintenance or overloading.|
+---
+---
+|what are  preflight requests?|
+|:--------------------|
+
 ---
