@@ -336,7 +336,36 @@ Defect fixing if any and parallelly SAAD, collections maintenance and other docs
 ---
 |14. What is Swagger and why its needed?|
 |:--------------------|
+```
+Swagger (OpenAPI) plays a significant role in the Apigee platform, offering several benefits for API design, development, and management.
 
+1. Standardized API Definition:
+Apigee utilizes the OpenAPI Specification as a standard way to define APIs. 
+
+2. Seamless Integration:
+Apigee readily integrates with Swagger tools. You can:
+Import existing OpenAPI specifications into Apigee as Proxy.
+OpenAPI specifications are easily sharable documentation.
+
+3. Enhanced Developer Experience:
+By adhering to the OpenAPI standard, understandable for developers familiar with Swagger.
+This saves the learning effort and facilitates faster integration and usage of your APIs.
+
+4. interactive Documentation:
+Interactive documentation associated with your API proxies.
+This ensures developers always have access to up-to-date and accurate information about your APIs.
+
+5. Improved Collaboration:
+The standardized and shareable nature of OpenAPI specifications fosters better communication and collaboration between API providers (your team) and consumers (developers using your APIs).
+Everyone works from the same blueprint, leading to fewer misunderstandings and a smoother development process.
+
+
+In summary, Swagger acts as a bridge between developers and your Apigee-managed APIs. By utilizing Swagger and its associated tools, you can:
+Standardize API design and documentation.
+Improve developer experience and collaboration.
+Streamline API development and testing workflows.
+Enhance the overall quality and discoverability of your APIs.
+```
 ---
 ---
 |15. what are recent production issues that you have faced?|
@@ -344,15 +373,11 @@ Defect fixing if any and parallelly SAAD, collections maintenance and other docs
 ```
 -webhook/json address id fuctionality
 -idepotency issue
+-xml to json conversion unexpected behaviour for sinle & multiple array element.
 ```
 ---
 ---
 |16. some more Interview questions|
-|:--------------------|
-
----
----
-|16. what are  preflight requests?|
 |:--------------------|
 
 ---
