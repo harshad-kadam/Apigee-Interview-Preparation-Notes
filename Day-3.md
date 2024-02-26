@@ -231,7 +231,124 @@ Apigee migration resources: https://m.youtube.com/watch?v=ztjXG2_9iaw
 |503 Service Unavailable: This code indicates that the server is currently unable to handle the request due to maintenance or overloading.|
 ---
 ---
-|what are  preflight requests?|
+|8. CORS(Cross-Origin Resource Sharing) Concept|
+|:--------------------|
+- CORS is a security feature implemented by web browsers that prevents a web page from making requests to a different domain than the one that served the web page. This is done to prevent malicious websites from making unauthorized requests to other sites on behalf of the user.
+
+- When a browser makes a request to a different domain, the server can include a set of headers in its response that indicate which domains are allowed to access the resource. The browser will then check these headers before allowing the request to proceed. If the headers indicate that the domain making the request is not allowed to access the resource, the browser will block the request and the user will not be able to access the resource.
+
+- To enable CORS, a server must include the following headers in its responses:
+```
+Access-Control-Allow-Origin: This header indicates which domains are allowed to make requests to the resource. It can be set to "*" to allow any domain to make requests, or it can be set to a specific domain.
+
+Access-Control-Allow-Methods: This header indicates which HTTP methods are allowed for the resource.
+
+Access-Control-Allow-Headers: This header indicates which headers are allowed in the request.
+
+Access-Control-Allow-Credentials: This header indicates whether or not the resource allows requests with credentials (e.g. cookies or HTTP authentication)
+
+Access-Control-Max-Age: This header indicate how long (in seconds) the response to the preflight request can be cached.
+```
+- It's important to note that enabling CORS can introduce security risks, so it's important to be careful when configuring the headers. For example, if the server sets the Access-Control-Allow-Origin header to "*", any domain will be able to make requests to the resource, which could open the server up to cross-site scripting (XSS) attacks.
+
+- CORS can also be bypassed by using a CORS proxy, which is a server that acts as a middleman between the client and the server. The client makes a request to the proxy, which then makes a request to the server on the client's behalf. The server then sends its response to the proxy, which in turn sends the response to the client. This way, the browser doesn't block the request since it's made to the same domain.
+
+---
+---
+|9. what are  preflight requests?|
+|:--------------------|
+Preflight requests, also known as CORS (Cross-Origin Resource Sharing) preflight requests, are a crucial mechanism in web security. They act like a "check-in" before a browser sends an actual request to a server from a different domain (origin) than the one that served the initial web page.
+
+Here's a breakdown of preflight requests in depth:
+
+**Purpose:**
+
+* **Security:** Preflight requests ensure the server understands and allows the type of request being sent (e.g., GET, POST, PUT, DELETE) and any custom headers it might include. This prevents potential security vulnerabilities like Cross-Site Request Forgery (CSRF) attacks.
+* **Compatibility:** Preflight requests allow the server to inform the browser about its CORS configuration, ensuring the main request is sent only if the server allows it.
+
+**How it works:**
+
+1. **Main Request:** When a browser encounters a resource (e.g., image, script) from a different origin than the current page, it initiates an HTTP request with the desired method (e.g., GET).
+2. **Preflight Request:** Before sending the main request, the browser sends an OPTIONS request to the server. This preflight request includes information about:
+    * **Origin:** The origin of the page requesting the resource.
+    * **Access-Control-Request-Method:** The HTTP method used in the main request (e.g., GET, POST, etc.).
+    * **Access-Control-Request-Headers (Optional):** Any custom headers included in the main request.
+3. **Server Response:** The server checks its CORS configuration and responds with an OPTIONS response containing specific CORS headers:
+    * **Access-Control-Allow-Origin:** Specifies which origins are allowed to access the resource. "*" indicates anyone, or specific origins can be listed.
+    * **Access-Control-Allow-Methods (Optional):** Lists the allowed HTTP methods for this resource.
+    * **Access-Control-Allow-Headers (Optional):** Lists the allowed custom headers in the request.
+    * Other optional CORS headers like `Access-Control-Allow-Credentials` can be included.
+4. **Main Request (if allowed):** If the server allows the request based on the preflight response, the browser proceeds with the main request using the original HTTP method.
+
+**Benefits:**
+
+* **Enhanced security:** Protects servers from malicious requests from other origins.
+* **Improved compatibility:** Ensures cross-origin requests are handled correctly by servers.
+
+**Limitations:**
+
+* **Additional overhead:** Preflight requests add an extra round-trip to the server, potentially impacting performance.
+* **Configuration complexity:** Servers need proper CORS configuration to manage allowed origins, methods, and headers.
+
+**Understanding preflight requests is essential for anyone involved in web development, especially when working with cross-origin resources.** By utilizing this mechanism, you can ensure secure and compatible communication between web applications from different origins.
+
+---
+---
+|10. what are  preflight requests?|
 |:--------------------|
 
+---
+---
+|11. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|12. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|13. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|14. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|9. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|15. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|16. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|17. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|18. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|19. what are  preflight requests?|
+|:--------------------|
+
+---
+---
+|20. what are  preflight requests?|
+|:--------------------|
 ---
