@@ -357,27 +357,105 @@ Defect fixing if any and parallelly SAAD, collections maintenance and other docs
 
 ---
 ---
-|17. what are  preflight requests?|
+|17. Analytics USE?|
 |:--------------------|
+```
+<img width="901" alt="Analytics" src="https://github.com/harshad-kadam/Apigee-Interview-Preparation-Notes/assets/48818400/ae0be278-baea-43dd-8e65-6d8021a5e276">
+
+API Monitoring
+Overview
+Timeline
+Investigate
+Recent
+Collections
+
+Events
+
+Alert Rules
+
+API Metrics
+API Proxy Performance
+Cache Performance
+Error Code Analysis
+Latency Analysis
+Target Performance
+
+Developers
+Developer Engagement
+Traffic Composition
+
+End Users
+Devices
+Geomap
+
+Custom Reports
+Reports
+Report Jobs
+
+
+From a developer's perspective:
+Understanding user behavior: Analyze user interactions with the application to identify usability issues, navigation patterns, and feature usage.
+Debugging and performance optimization: Identify performance bottlenecks, diagnose errors, and optimize application code based on real-world data.
+A/B testing and experimentation: Measure the impact of changes to the application (e.g., new features, UI changes) by comparing different versions with real user data.
+Personalization and user experience: Personalize the application based on user data and preferences to improve engagement and satisfaction.
+Data visualization and reporting: Create interactive dashboards and reports to visualize key metrics and insights for internal stakeholders.
+
+From a business perspective:
+Customer acquisition and retention: Analyze marketing campaign performance, understand customer acquisition channels, and identify factors influencing customer churn.
+Product development and improvement: Use analytics data to guide product development decisions, prioritize features, and ensure products are meeting user needs.
+Market research and competitive analysis: Understand market trends, analyze competitor offerings, and identify opportunities for differentiation.
+Operational efficiency and cost optimization: Optimize resource allocation, identify areas for cost reduction, and improve operational efficiency based on data-driven insights.
+Revenue growth and profitability: Analyze revenue streams, identify opportunities for upselling and cross-selling, and make data-driven decisions to maximize profitability.
+Regulatory compliance: Ensure compliance with relevant regulations by capturing and analyzing data related to user activity and transactions.
+```
 
 ---
 ---
-|18. what are  preflight requests?|
+|18. What are different apigee flows?|
 |:--------------------|
+```
+-Proxy Endpoint (Preflow | Postflow) [request/response]
+-Target Endpoint (Preflow | Postflow) [request/response]
+-FaultRules/FaultFlow/ErrorFlow
+-Postclient Flow(always executes | analytics sent to apigee | logging can also be implemented using this flow)
+```
 
 ---
 ---
-|19. what are  preflight requests?|
+|19. Exaplin CICD process that you are following?|
 |:--------------------|
+```
+* **For Lower env:**
+-create dev branch from master
+-create feture branches from dev to work on feature's
+-git repo structure
+-Local development
+-POM versions check using JFrog | configurations for edge & config files (IM plans update acccordingly)
+-jenkins thorugh build/configs create | verify created configs on UI
+-test and lint execution
+-SAST/DAST reports generation
+-after that deploy bundle
+-cross verify deployment on UI
+-inform QA's for deployment completion
 
+* **For Higher Env/Hotfixes:**
+-CM tickets 10days prior
+-IM/CM plans | Rollback plans
+-deployment checklist/and (prod/devops KT's)
+-POM versions check using JFrog | decide priority & steps of api's (IM plans update acccordingly)
+-configurations for edge & config files | build n deploy via jenkins | verify created configs on UI
+-if any deployment fauilure check jenkins logs | to avoid impact rollback steps execution
+-help prod and devops with planned activities
+-keep informing in groups & QA for deployment completion and other things
+-send mail if deployment window extension needed n take approvals
+-support regional deployments & higher env issues 
+-merge dev branch to master
+```
 ---
 ---
 |20. some more Interview questions|
 |:--------------------|
 ```
-- Exaplin CICD process that you are following.
-- What are different apigee flows
-- analytics use
 - policies: access control, access entity
 - What are attributes in apigee  their usage,
 - Explain KVM & its usage,
