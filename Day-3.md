@@ -478,8 +478,8 @@ Regulatory compliance: Ensure compliance with relevant regulations by capturing 
 |:--------------------|
 ```
 - policies: access control, access entity
-- What are attributes in apigee  their usage,
-- Explain KVM & its usage,
+- What are attributes in apigee their usage,(use case: data needs to be fetched at runtime to decide behaviour of api(different behaviour for diff api consumers))
+- Explain KVM & its usage,(encrypted/non-encrypted)
 - HTTP vs LocalTargetConnection,
 - mTLS setup handson experience, 
 - quota vs spike arrest
@@ -489,6 +489,6 @@ Regulatory compliance: Ensure compliance with relevant regulations by capturing 
 - Oauth &  different grant types,
 - SF in detail,
 - Which Apigee version you worked on (SAAS, Hybrid, On-Prem, Multi-cloud)
-- about JS policy that you worked on
+- about JS policy that you worked on ( api versioning implementation logic | complex payload parsing | logging field's value's customization | best suited for any logic that can not be implemented with apigee out of the box policies)
 ```
 ---
