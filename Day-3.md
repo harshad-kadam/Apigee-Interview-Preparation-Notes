@@ -360,8 +360,9 @@ Defect fixing if any and parallelly SAAD, collections maintenance and other docs
 |17. Analytics USE?|
 |:--------------------|
 <img width="901" alt="Analytics" src="https://github.com/harshad-kadam/Apigee-Interview-Preparation-Notes/assets/48818400/ae0be278-baea-43dd-8e65-6d8021a5e276">
+```
+*API Monitoring
 
-* API Monitoring
 1]Timeline(error & latency alayzations)
 -select time-window
 -select[environment | region | proxies | targets]
@@ -371,17 +372,17 @@ Defect fixing if any and parallelly SAAD, collections maintenance and other docs
 
 3]Collections (Group API proxies, targets, or dev apps to facilitate monitoring and diagnose issues faster.)
 
-* Events(Monitor and analyze real-time events like):
+*Events(Monitor and analyze real-time events like):
 Example: An API call exceeding a certain threshold for processing time.
 Example: A specific error code occurring more frequently than usual.
 Example: A security incident like an unauthorized login attempt.
 
-* Alert Rules(Set up automated alerts based on specific criteria to be notified of critical events, such as):
+*Alert Rules(Set up automated alerts based on specific criteria to be notified of critical events, such as):
 Example: An API proxy experiencing an error rate exceeding 5%.
 Example: A backend target becoming unavailable.
 Example: TLS certificate expiry notification ahead of time.
 
-* API Metrics
+*API Metrics
 -API Proxy Performance: Analyze overall API proxy performance metrics like:
 Example: Throughput (number of requests processed per second)
 Example: Errors (number of failed requests)
@@ -395,7 +396,7 @@ Example: Distribution of latency across different API calls or endpoints.
 Example: Response times of backend services.
 Example: Resource utilization of backend systems.
 
-* Developers:
+*Developers:
 -Developer Engagement: Track developer activity and resource utilization, such as:
 Example: Number of API proxies created and modified by each developer.
 Example: API calls made by developer applications for testing and debugging purposes.
@@ -403,14 +404,14 @@ Example: API calls made by developer applications for testing and debugging purp
 Example: Identify the percentage of traffic coming from mobile devices vs. web browsers.
 Example: Track
 
-* End Users
+*End Users
 Devices
 Geomap
 
-* Custom Reports
+*Custom Reports
 Reports
 Report Jobs
-
+```
 ```
 From a developer's perspective:
 Understanding user behavior: Analyze user interactions with the application to identify usability issues, navigation patterns, and feature usage.
