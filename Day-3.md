@@ -294,13 +294,19 @@ Here's a breakdown of preflight requests in depth:
 
 ---
 ---
-|10. what are  preflight requests?|
+|10. what is keycloak auth?|
 |:--------------------|
+|Keycloak is an open-source identity and access management solution. It provides authentication and authorization services for applications and is often used as an identity provider for microservices and cloud-native applications. Keycloak supports multiple authentication mechanisms, including username and password, OAuth 2.0, OpenID Connect, and SAML. It also provides features such as user management, role-based access control, and Single Sign-On (SSO) across multiple applications. Keycloak can be easily integrated with different types of applications and services, such as web applications, mobile apps, and APIs. This makes it a popular choice for securing microservices and cloud-native architectures.|
 
 ---
 ---
-|11. what are  preflight requests?|
+|11. What is the use of API Gateway and Why API gateway required?|
 |:--------------------|
+|API Gateway is a service that sits between a client and a set of microservices. It acts as a reverse proxy, routing requests from clients to the appropriate microservice and then returning the microservice's response to the client. It acts as the only entryway into a system allowing multiple APIs or microservices to control security, rate limiting, and other common cross-cutting concerns.
+API gateway platforms are used to easily publish, manage and monitor APIs securely
+in a highly-scalable environment. Gateways additionally include features such as the ability
+to apply security policies and usage policies, collecting and analysing statistics and other
+value-adds.Additionally, API Gateway can handle tasks such as request/response transformation, which allows for a more flexible and decoupled system.|
 
 ---
 ---
