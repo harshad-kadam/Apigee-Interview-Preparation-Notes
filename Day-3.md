@@ -379,6 +379,8 @@ Enhance the overall quality and discoverability of your APIs.
 -long spring micorservice URL name was causing target server not working issue.
 -Retrial service callout URL append issue
 -Service account key without \n was not working (it was considering it as a single string)
+-Javascript complex code timeout, code separated functinality wise using different javascipt.
+- code wihtout try catch causing parsing runtime error.
 ```
 ---
 ---
