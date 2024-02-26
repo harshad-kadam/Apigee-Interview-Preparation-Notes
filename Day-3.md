@@ -360,7 +360,7 @@ Defect fixing if any and parallelly SAAD, collections maintenance and other docs
 |17. Analytics USE?|
 |:--------------------|
 <img width="901" alt="Analytics" src="https://github.com/harshad-kadam/Apigee-Interview-Preparation-Notes/assets/48818400/ae0be278-baea-43dd-8e65-6d8021a5e276">
-```
+
 * API Monitoring
 1]Timeline(error & latency alayzations)
 -select time-window
@@ -411,7 +411,7 @@ Geomap
 Reports
 Report Jobs
 
-
+```
 From a developer's perspective:
 Understanding user behavior: Analyze user interactions with the application to identify usability issues, navigation patterns, and feature usage.
 Debugging and performance optimization: Identify performance bottlenecks, diagnose errors, and optimize application code based on real-world data.
