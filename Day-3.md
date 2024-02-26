@@ -371,9 +371,13 @@ Enhance the overall quality and discoverability of your APIs.
 |15. what are recent production issues that you have faced?|
 |:--------------------|
 ```
--webhook/json address id fuctionality
+-webhook were not sending notifications to intended notification( for old complex condition instead of OR operator AND was there).
 -idepotency issue
 -xml to json conversion unexpected behaviour for sinle & multiple array element.
+-status update functionality overring issue becuase of 2 API's to achieve same thing.
+-cache duplicate key issue
+-long spring micorservice URL name was causing target server not working issue.
+-
 ```
 ---
 ---
