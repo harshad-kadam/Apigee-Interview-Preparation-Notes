@@ -300,37 +300,54 @@ Here's a breakdown of preflight requests in depth:
 
 ---
 ---
-|11. What is the use of API Gateway and Why API gateway required?|
+|11. What is the use of API Gateway and why needed?|
 |:--------------------|
-|API Gateway is a service that sits between a client and a set of microservices. It acts as a reverse proxy, routing requests from clients to the appropriate microservice and then returning the microservice's response to the client. It acts as the only entryway into a system allowing multiple APIs or microservices to control security, rate limiting, and other common cross-cutting concerns.
-API gateway platforms are used to easily publish, manage and monitor APIs securely
-in a highly-scalable environment. Gateways additionally include features such as the ability
-to apply security policies and usage policies, collecting and analysing statistics and other
-value-adds.Additionally, API Gateway can handle tasks such as request/response transformation, which allows for a more flexible and decoupled system.|
+|API Gateway is a service that sits between a client and a set of microservices. It acts as a reverse proxy, routing requests from clients to the appropriate microservice and then returning the microservice's response to the client. It acts as the only entryway into a system allowing to control security, rate limiting, monitoring statistics and other common cross-cutting concerns.|
+|API gateway platforms are used to easily publish, monitor and manage APIs securely. Additionally, API Gateway can handle tasks such as request/response transformation, which allows for a more flexible and decoupled system.|
 
 ---
 ---
-|12. what are  preflight requests?|
+|12. About /ping endpoint|
+|:--------------------|
+|In web APIs, the /ping endpoint is often used as a simple health check endpoint. When a client sends a GET request to the /ping endpoint, the server responds with a simple confirmation that the service is up and running. This can be useful for monitoring the health of an API, as well as for load balancing and failover scenarios.|
+|For example, a client could periodically send a GET request to the /ping endpoint to check if the API is available and responding to requests. If the server responds with a 200 status code and a success message, the client knows that the API is healthy and can continue to use it. If the server does not respond, or if it responds with an error status code, the client may assume that the API is down or experiencing issues and may take corrective action, such as switching to a backup server or service.|
+|In summary, the /ping endpoint is a simple and lightweight way to monitor the health of an API, and can be used in conjunction with other monitoring and alerting tools to ensure that the API is always available and performing as expected.|
+
+---
+---
+|13. what is your Daily Work schedule?|
+|:--------------------|
+```
+1]focus mode 2]internal(issues/impedences) 3] QA/other teams help 4]stadups & groomings.
+Different activities & responsibilities --->
+analyzing future user stories before grooming & list down questions to ask in grooming call
+development or enhancement of proxies and sf's and other things like kvm/server if required
+support to qa and other teams in case of issues 
+UseSrories status update on rally on a regular basis
+attend internal standup & grooming calls--daily status, issues & impedances
+once development is done peer review
+work on suggested changes, again peer review if required.
+Unit testing doc
+deployment to lower env
+Defect fixing if any and parallelly SAAD, collections maintenance and other docs
+```
+
+---
+---
+|14. What is Swagger and why its needed?|
 |:--------------------|
 
 ---
 ---
-|13. what are  preflight requests?|
+|15. what are recent production issues that you have faced?|
 |:--------------------|
-
+```
+-webhook/json address id fuctionality
+-idepotency issue
+```
 ---
 ---
-|14. what are  preflight requests?|
-|:--------------------|
-
----
----
-|9. what are  preflight requests?|
-|:--------------------|
-
----
----
-|15. what are  preflight requests?|
+|16. some more Interview questions|
 |:--------------------|
 
 ---
@@ -355,6 +372,24 @@ value-adds.Additionally, API Gateway can handle tasks such as request/response t
 
 ---
 ---
-|20. what are  preflight requests?|
+|20. some more Interview questions|
 |:--------------------|
+```
+- Exaplin CICD process that you are following.
+- What are different apigee flows
+- analytics use
+- policies: access control, access entity
+- What are attributes in apigee  their usage,
+- Explain KVM & its usage,
+- HTTP vs LocalTargetConnection,
+- mTLS setup handson experience, 
+- quota vs spike arrest
+- security policies used,(VerifyApiKey | XML/Json treat Protection | JWT | HMAC | Regex Protection)
+- error codes 404,403,503 when you seen and how you handled
+- API specs explanation/swagger,
+- Oauth &  different grant types,
+- SF in detail,
+- Which Apigee version you worked on (SAAS, Hybrid, On-Prem, Multi-cloud)
+- about JS policy that you worked on
+```
 ---
