@@ -248,7 +248,9 @@ breakdown of the Apigee architecture and components, aiming for greater clarity 
 |:--------------------|
 ```
 1] make a call to proxy, which will keep repeatatively calling itself with same details. what will happend?
-3] 
+2] if we use JS inbuilt functions & string fnctions, if we have not added try catch then for invalid input what will happend?
+3] Written recusion based code in JS, and at runtime base condition of recusion does not met for unexpected input. what will happen?
+4] 
 ```
 ---
 ---
@@ -324,6 +326,7 @@ Answer: Leverage Apigee's Traffic Shift feature. Configure different API proxy r
 - flow call-out
 - which version on apigee on Prem or on cloud
 - logging
+- How to make call from javascript to third party URL(use HTTPClient)
 - How much you are comfortable with JS & node JS
 - error handling for generic and custom error 
 - process of data insertion into action DB | insertion into logs
