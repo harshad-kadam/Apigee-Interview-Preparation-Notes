@@ -1,4 +1,4 @@
-# :label::bookmark: Apigee-Interview-Preparation-Notes DAY 5 :high_brightness: (template for everyone to contribute)
+# :label::bookmark: Apigee-Interview-Preparation-Notes DAY 5 :high_brightness: (Use Below template for who wants to contribute)
 ---
 ---
 |1. sample question|
