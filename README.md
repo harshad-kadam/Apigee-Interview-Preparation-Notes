@@ -34,16 +34,21 @@ Please ensure that your contributions adhere to the overall structure and format
 ## Interview Tips 📄
 ```
 > if two interviewer in meeting try to focus at centre of the screeen, 
-> sit upright | formal clothing
+> sit upright | Dress Appropriately
+> everyday half an hour revision of previous day interview learnings. you can record answers while revising and listen them. else 
 > before interview own voice 7days recording and listening practice (at the end you will see singificant difference in communication), 
-> everyday half an hour previous day learnings lessons revesion.
-> think answer's proper format in mind then answer | if the questions already learn you can directly answer
+> think answer's proper format in mind then answer | if the questions already learnt you can directly answer
 > something not clear then ask questions to interviwer
 > technical rounds-speak slowly & HR rounds- speak harshly
 > dont think much about inverviews just appear for its process.
+> Review the Job Description properly. Tailor your responses to that align with the job description.
+> dont under-estimate Preparing responses to common interview questions related to your field, such as your strengths and weaknesses, previous experiences, and why you're interested in the role. keep stories ready from past experiences(it build confidence in your responses).
+> Research about the Company[linked in, Compnay portal & glassdoor reviews]
+> frame responses using STAR method (Situation, Task, Action, Result)
 > half an hour before start making interview setup ready.
 [settings like backgroud blour, headphone change, ensure device fully charged, keep charger connected to laptop, keep backup Network ready in case of Network issue, ensure tools(Google Meet/ Zoom whichever is working on your device}
 > on the day of interview follow normal schedule, never revise or learn. consider it as a process just like you do your daily tasks.
+> Stay Calm and Be Yourself: Lastly, remember to stay calm, trust in your abilities and remeber your past best winnings. 
 ```
 
 ## Acknowledgments 🙏
