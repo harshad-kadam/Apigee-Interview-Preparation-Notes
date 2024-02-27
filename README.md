@@ -32,7 +32,7 @@ If you'd like to contribute to this repository, please follow these guidelines:
 Please ensure that your contributions adhere to the overall structure and formatting of the repository.
 
 ## Interview Tips 📄
-
+```
 > if two interviewer in meeting try to focus at centre of the screeen, 
 > sit upright | formal clothing
 > before interview own voice 7days recording and listening practice (at the end you will see singificant difference in communication), 
@@ -44,6 +44,7 @@ Please ensure that your contributions adhere to the overall structure and format
 > half an hour before start making interview setup ready.
 [settings like backgroud blour, headphone change, ensure device fully charged, keep charger connected to laptop, keep backup Network ready in case of Network issue, ensure tools(Google Meet/ Zoom whichever is working on your device}
 > on the day of interview follow normal schedule, never revise or learn. consider it as a process just like you do your daily tasks.
+```
 
 ## Acknowledgments 🙏
 
