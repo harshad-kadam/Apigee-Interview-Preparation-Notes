@@ -1,100 +1,100 @@
-# :label::bookmark: Apigee-Interview-Preparation-Notes DAY 5 :high_brightness:
+# :label::bookmark: Apigee-Interview-Preparation-Notes DAY 5(template for everyone to contribute) :high_brightness:
 ---
 ---
-|1. Some Protocols:|
+|1. sample question|
 |:------------|
 
 ---
 ---
-|2. Explain REST|
+|2. sample question|
 |:------------|
 
 ---
 ---
-|3. What is oauth2?|
+|3. sample question|
 |:------------|
 
 ---
 ---
-|4. different grant types with deep explanation|
+|4. sample question|
 |:------------|
 
 ---
 ---
-|5. difference between oauth 1.0 and oauth 2.0|
+|5. sample question|
 |:---------------------------
 ---
 ---
-|6. Difference between apigee x & apigee edge|
+|6. sample question|
 |:-----------------|
 
 ---
 ---
-|7. More often seen Http status codes|
+|7. sample question|
 |:-----------------|
 
 ---
 ---
-|8. CORS(Cross-Origin Resource Sharing) Concept|
+|8. sample question|
 |:--------------------|
 
 ---
 ---
-|9. what are  preflight requests?|
+|9. sample question|
 |:--------------------|
 
 ---
 ---
-|10. what is keycloak auth?|
+|10. sample question|
 |:--------------------|
 
 ---
 ---
-|11. Some Protocols:|
+|11. sample question|
 |:------------|
 
 ---
 ---
-|12. Explain REST|
+|12. sample question|
 |:------------|
 
 ---
 ---
-|13. What is oauth2?|
+|13. sample question|
 |:------------|
 
 ---
 ---
-|14. different grant types with deep explanation|
+|14. sample question|
 |:------------|
 
 ---
 ---
-|15. difference between oauth 1.0 and oauth 2.0|
+|15. sample question|
 |:---------------------------
 ---
 ---
-|16. Difference between apigee x & apigee edge|
+|16. sample question|
 |:-----------------|
 
 ---
 ---
-|17. More often seen Http status codes|
+|17. sample question|
 |:-----------------|
 
 ---
 ---
-|18. CORS(Cross-Origin Resource Sharing) Concept|
+|18. sample question|
 |:--------------------|
 
 ---
 ---
-|19. what are  preflight requests?|
+|19. sample question|
 |:--------------------|
 
 ---
 ---
-|20. what is keycloak auth?|
+|20. sample question|
 |:--------------------|
 
 ---
