@@ -99,7 +99,7 @@
 
 ---
 ---
-> [!TIP]
+> [!TIP under]
 > Please modify template based on your needs.
 
 > [!IMPORTANT]
