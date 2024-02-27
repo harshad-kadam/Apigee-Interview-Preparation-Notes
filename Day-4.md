@@ -63,6 +63,7 @@ Example: You can attach a flow hook to the pre-proxy flow in your environment to
 |:---------------------------
 ```
 - Will check first is it for apigee or other technology stack
+- will go thorugh community articles for similar issues, will think of alternative approach(as there is always alternative for most of the problems). 
 - if apigee then a] with proper analyzation of issue contact google support team for paid organization by creating ticket b] post question on apigee community. 
 ```
 ---
