@@ -68,10 +68,11 @@ Example: You can attach a flow hook to the pre-proxy flow in your environment to
 ```
 ---
 ---
-|6. current project and work.|
+|6. current project and work & What are daily life different Interactions in project.|
 |:-----------------|
 ```
 Methodology: Agile [Release--->sprint]
+- project specific explanations
 - product requirement comes in the form of features
 - BA's create stories in Rally & then story gets pointed accoring to work
 - Story analyzation before grooming
@@ -117,33 +118,40 @@ Methodology: Agile [Release--->sprint]
 ```
 ---
 ---
-|8. CORS(Cross-Origin Resource Sharing) Concept|
+|8. how request flow works in your proxies end to end.|
 |:--------------------|
-
----
----
-|9. what are  preflight requests?|
-|:--------------------|
-
----
----
-|10. what is keycloak auth?|
-|:--------------------|
-
-2] how request flow works in your proxies end to end.
+```
 -client[mobile(android/ios) | browser(crome/firefox/edge/opera/safari/brave)(windows/linux/unix/macOS/chromeOs)(laptop/desktop/Ipad)]
--JSON/XML
--client side loadbalancer/firewall/DNS/TCP handshake/TLS Key & certificate exchanges/iso-osi model_7 layer protocol(https://images.app.goo.gl/SaX2bBPLd5sz1KqE7, https://images.app.goo.gl/84B4AWwepD5bPyZS8, )
+- Reuqest payloads JSON/XML
+-client side loadbalancer/firewall/DNS/TCP handshake/TLS Key & certificate exchanges/iso-osi model_7 layer protocol(https://images.app.goo.gl/SaX2bBPLd5sz1KqE7, https://images.app.goo.gl/84B4AWwepD5bPyZS8)
 -multiregions concept--->Gateways(routers--->MP's)--->other apigee components
 -VH+basepath+URI component to identify proxy & endpoint & resources/flows operations
 -Flow Hooks| base | versioning
 -Main Api | policy based securities & validations & transformation of request | Coversion of date, time, country & currency formats if needed
 -Target load balancing | algorithms | healthcheck
 -Response transformation based on client & target error | fault | success scenario
--DB insertions based on action or transaction | fault handling using conditional or generic error | log insertion using flow hook
+-DB insertions based on action and any other db's | fault handling using conditional or generic error | log insertion using flow hook
 -base api passthrough response | flow hook for logging 
 -In general API messages travels through 3 main flows request, response & error
-3] error handling for generic and manual error 
+```
+---
+---
+|9. What are different security policies that you are using in your project.?|
+|:--------------------|
+```
+As per xyz company standard & downstream standard
+- In flow hooks using spike arrest
+- main api | security shared flow based on requirement(oauth | verifyapi key | SOAP msg validation | XML or JSON threat protection | quota & many other)
+- for internal api's access control | oauth | Verify api key
+- for downstream HMAC | JWT 
+```
+
+---
+---
+|10. what is keycloak auth?|
+|:--------------------|
+
+3] error handling for generic and custom error 
 -insert into action DB | insert into logs
 4] How do you interact with databases 
 -Action DB | Transaction DB | GCP logging
@@ -155,31 +163,14 @@ Methodology: Agile [Release--->sprint]
 -Unit  testing, peer review, code merge & deployment, Swagger & SAAD doc, postman collections & structural doc maintenance
 -Charge ticket, Shrikants Lead approval, management approval
 -Internal, standup, grooming, (downstream & product call if required)
-7] What are daily life different Interactions in project. 
 8] which tool for deployment.
 -GitHub, POM/edge.json/config.json | 
 higher env deployment calls activities--->Change ticket, Rollback & IM plan,branching, merge, devops build(kvm/server)  verification , deployment revision verification, prod support for pointing and manual sensitive data deployment, deployment status updation to lead on regular interval, defect fixing.
 9] REST or SOAP 10] When do you create swagger doc & which tool do you use to create it. 
 11] How many team members are there in your team 
 -Global Payments account with multiple functioning teams | 8 developer members in team including lead
-12] What are different security policies that you are using in your project. 
-As per Global Payments standard & downstream standard
-- flow hook-spike arrest
-- base pass though
-- main api | security shared flow based on requirement(oauth | verifyapi key | SOAP msg validation | XML or JSON threat protection | quota)
-- postback api's access control | oauth | Verify api key
+
 13] How are you comfortable with JS & node 
-14]  Mistake- 
-if two interviewer in meeting try to focus at centre of the screeen, 
-sit upright, 
-7days recording and listening practice, 
-everyday half an hour past learnings lessons revesion, 
-think answer proper format in mind then answer | the questions already learn you can directly answer
-something not clear then ask questions to interviwer
-technical rounds-speal slowly & HR rounds- speak harshly, 
-dont think much about inverviews just appear for it
-half an hour before settings like backgroud blour, headphone change, etc
-on the day of interview follow normal schedule, never revise or learn
 
 ---
 ---
@@ -225,9 +216,10 @@ on the day of interview follow normal schedule, never revise or learn
 |19. what are  preflight requests?|
 |:--------------------|
 
+
 ---
 ---
-|20. what is keycloak auth?|
+|20. Some more Interview topics|
 |:--------------------|
 ```
 - Raise fault vs route rules 
