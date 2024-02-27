@@ -386,7 +386,8 @@ Enhance the overall quality and discoverability of your APIs.
 ---
 |16. Explain versioning in API Gateway?|
 |:--------------------|
-|1. Path-Based Versioning:
+```
+> 1. Path-Based Versioning:
 Description: Utilizes different URL paths to differentiate between API versions.
 Implementation:
 Define separate API proxies in Apigee for each version.
@@ -397,8 +398,8 @@ Clear separation of concerns between versions.
 Independent deployment and management of each version.
 Drawbacks:
 Requires managing multiple proxies, increasing complexity for many versions.
-Clients need to modify the base URL in requests to switch versions.|
-|2. Resource-Based Versioning:
+Clients need to modify the base URL in requests to switch versions.
+2. Resource-Based Versioning:
 Description: Uses a single API proxy but includes a version identifier within the resource path or query parameters.
 Implementation:
 Define a single API proxy in Apigee for all versions.
@@ -408,8 +409,8 @@ Reduces the number of proxies needed, simplifying management.
 Clients can switch versions without changing the base URL.
 Drawbacks:
 Requires complex routing logic within the proxy to identify the version.
-May require additional backend logic to handle different versions.|
-|3. Versioning through Custom Headers:
+May require additional backend logic to handle different versions.
+3. Versioning through Custom Headers:
 Description: Leverages custom headers in the request to specify the desired API version.
 Implementation:
 Define a custom header (e.g., X-Api-Version) in your API specification.
@@ -420,8 +421,8 @@ Keeps the URI clean and uncluttered with version information.
 Offers flexibility for client applications using various languages and frameworks.
 Drawbacks:
 Requires additional development effort to implement custom header handling in both Apigee and client applications.
-Less familiar approach compared to path-based or resource-based methods.|
-|Choosing the Right Approach:
+Less familiar approach compared to path-based or resource-based methods.
+Choosing the Right Approach:
 The best approach depends on your specific needs, considering factors like:
 Number of API versions: If managing a limited number of versions, path-based might be sufficient.
 Complexity of version differences: Significant differences might favor path-based for clearer separation.
@@ -430,7 +431,8 @@ Management complexity: Consider the effort required to manage multiple proxies v
 Additional Considerations:
 Versioning Policy: Clearly define your versioning strategy, deprecation schedule, and support timelines.
 Backward Compatibility: Strive to maintain backward compatibility for minimal disruption.
-Documentation: Update your API documentation to reflect the chosen approach and how clients specify versions.|
+Documentation: Update your API documentation to reflect the chosen approach and how clients specify versions.
+```
 
 ---
 ---
