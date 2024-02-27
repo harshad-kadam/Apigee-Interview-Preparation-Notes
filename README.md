@@ -40,7 +40,7 @@ Please ensure that your contributions adhere to the overall structure and format
 > think answer's proper format in mind then answer | if the questions already learnt you can directly answer
 > something not clear then ask questions to interviwer
 > technical rounds-speak slowly & HR rounds- speak harshly
-> dont think much about inverviews just appear for its process.
+> dont think much about inverviews just appear it as a process.
 > Review the Job Description properly. Tailor your responses to that align with the job description.
 > dont under-estimate Preparing responses to common interview questions related to your field, such as your strengths and weaknesses, previous experiences, and why you're interested in the role. keep stories ready from past experiences(it build confidence in your responses).
 > Research about the Company[linked in, Compnay portal & glassdoor reviews]
@@ -48,7 +48,8 @@ Please ensure that your contributions adhere to the overall structure and format
 > half an hour before start making interview setup ready.
 [settings like backgroud blour, headphone change, ensure device fully charged, keep charger connected to laptop, keep backup Network ready in case of Network issue, ensure tools(Google Meet/ Zoom whichever is working on your device}
 > on the day of interview follow normal schedule, never revise or learn. consider it as a process just like you do your daily tasks.
-> Stay Calm and Be Yourself: Lastly, remember to stay calm, trust in your abilities and remeber your past best winnings. 
+> Stay Calm and Be Yourself: Lastly, remember to stay calm, trust in your abilities and remember your past best winnings.
+> Lastly All The best! I believe if you are here you will definately crack it.
 ```
 
 ## Acknowledgments 🙏
