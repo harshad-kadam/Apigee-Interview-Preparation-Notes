@@ -148,35 +148,29 @@ As per xyz company standard & downstream standard
 
 ---
 ---
-|10. what is keycloak auth?|
+|10. Apart from development what are other tasks?|
 |:--------------------|
-
-3] error handling for generic and custom error 
--insert into action DB | insert into logs
-4] How do you interact with databases 
--Action DB | Transaction DB | GCP logging
-5] do you have any microservices in your projects 
-- MCS /routingDetails /productDetails /tranAuthDeails /other MCS micro services
-6] Apart from development what other tasks 
-- Interaction with QA or JAVA or DevOps or Prod Support team
--development, issues tracking with qa's, design architecture discussions, future us analyzations
+```
+-Interaction with QA or JAVA or DevOps or Prod Support team
+-development, issues tracking with qa's, design architecture discussions, upcoming features analyzations
 -Unit  testing, peer review, code merge & deployment, Swagger & SAAD doc, postman collections & structural doc maintenance
--Charge ticket, Shrikants Lead approval, management approval
+-Charge ticket, Lead approval, management approval
 -Internal, standup, grooming, (downstream & product call if required)
-8] which tool for deployment.
--GitHub, POM/edge.json/config.json | 
-higher env deployment calls activities--->Change ticket, Rollback & IM plan,branching, merge, devops build(kvm/server)  verification , deployment revision verification, prod support for pointing and manual sensitive data deployment, deployment status updation to lead on regular interval, defect fixing.
-9] REST or SOAP 10] When do you create swagger doc & which tool do you use to create it. 
-11] How many team members are there in your team 
--Global Payments account with multiple functioning teams | 8 developer members in team including lead
-
-13] How are you comfortable with JS & node 
+-client/devop's/prod team demo's
+-collegues help if they are stucked 
+```
 
 ---
 ---
-|11. Some Protocols:|
+|11. which tool/tech/process do you use for deployment?|
 |:------------|
-
+```
+-GitHub, POM/edge.json/config.json, JFrog to avoid POM versions of previous builds, Jenkins to take build & deploy.
+-higher env deployment calls activitiesn[Change ticket, Rollback & IM plan,branching, merge, devops build(kvm/server)  verification]
+-deployment revision verification
+-prod support for pointing and manual sensitive data deployment
+-deployment status updation to lead on regular interval, defect fixing.
+```
 ---
 ---
 |12. Explain REST|
@@ -242,8 +236,17 @@ higher env deployment calls activities--->Change ticket, Rollback & IM plan,bran
 - flow call-out
 - which version on apigee on Prem or on cloud
 - logging
+- How much you are comfortable with JS & node JS
+- error handling for generic and custom error 
+- process of data insertion into action DB | insertion into logs
+- How do you interact with databases (using GCP Bigquery(Action DB & Boarding DB | GCP logging)
+- What is getting used in company REST or SOAP
+- When do you create swagger doc & which tool do you use to create it.
+- How many team members are there in your team.
+- do you have any microservices in your projects (MCS /routingDetailsData /productDetailsData /tranAuthDeailsData /other MCS micro services)
 - When Interviewer asks any question for me
 [ ask for feedback, Apart from apigee what are different technologies with which you will be interacting after joining}  
+
 
 Achitecture based questions:
 - diffrent Apigee component/ Apigee infrastructure 
