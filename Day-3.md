@@ -1,4 +1,4 @@
-# Apigee-Interview-Preparation-Notes DAY 3 :octocat: :copyright:
+# Apigee-Interview-Preparation-Notes DAY 3 :octocat: :bookmark:	:label:	:high_brightness:
 ---
 ---
 1. Some Protocols:
