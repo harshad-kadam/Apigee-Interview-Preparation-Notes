@@ -59,8 +59,12 @@ Example: You can attach a flow hook to the pre-proxy flow in your environment to
 
 ---
 ---
-|5. difference between oauth 1.0 and oauth 2.0|
+|5. In case of some unresolvable errors/issues where your lead can't help, what will be your futher action?|
 |:---------------------------
+```
+- Will check first is it for apigee or other technology stack
+- if apigee then a] with proper analyzation of issue contact google support team for paid organization by creating ticket b] post question on apigee community. 
+```
 ---
 ---
 |6. Difference between apigee x & apigee edge|
@@ -68,9 +72,25 @@ Example: You can attach a flow hook to the pre-proxy flow in your environment to
 
 ---
 ---
-|7. More often seen Http status codes|
+|7. How to deploy the proxies and sf's in apigee(different ways)?|
 |:-----------------|
+```
+1. Management UI:
+-Easiest method for basic deployments.
+-Select revision, choose environment, and confirm.
 
+2. API Tools CLI:
+-Offers command-line deployment for automation.
+-Requires specific commands and environment details.
+
+3. Management API:
+-Enables programmatic deployments via API calls.
+-Useful for integration with CI/CD pipelines.
+
+4. Import/Export:
+-Export proxies/SFs as bundles for sharing or backup.
+-Import bundles into other Apigee environments.
+```
 ---
 ---
 |8. CORS(Cross-Origin Resource Sharing) Concept|
