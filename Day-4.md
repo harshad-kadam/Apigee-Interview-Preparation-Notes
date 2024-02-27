@@ -17,19 +17,19 @@
 Description: A policy within a shared flow that allows invoking another shared flow at specific points in the API proxy execution flow.
 Purpose: Used to inject reusable functionality from a shared flow into various stages of an API proxy's processing.
 Benefits:
-Promotes code reuse and modularity by sharing common logic across multiple API proxies.
-Enables consistent application of policies or transformations at different points in the flow.
-Provides flexibility in controlling when and where to execute specific logic within the API proxy.
-Example: You might have a shared flow for security checks and another for logging. A flow callout can be used to invoke the security check flow before routing the request to the backend and then invoke the logging flow after receiving the response.
+-Promotes code reuse and modularity by sharing common logic across multiple API proxies.
+-Enables consistent application of policies or transformations at different points in the flow.
+-Provides flexibility in controlling when and where to execute specific logic within the API proxy.
+Example: permission validations and standard mediation logics like trimming etc, this kina of common logics can be implemented using Flow Callout.
 ```
 > 2. Flow Hook:
 ```
 Description: A configuration option at the environment, proxy, or target level that allows attaching a specific shared flow to be executed at a pre-defined point in the processing flow.
 Purpose: Enables applying consistent enforcement of policies or transformations across all API proxies or targets within a defined scope.
 Benefits:
-Enforces policies or logic across a group of resources (environments, proxies, or targets) without modifying individual API proxies.
-Simplifies management by centralizing shared logic in a single location.
-Ideal for enforcing broad security requirements or common transformations across your API ecosystem.
+-Enforces policies or logic across a group of resources (environments, proxies, or targets) without modifying individual API proxies.
+-Simplifies management by centralizing shared logic in a single location.
+-Ideal for enforcing broad security requirements or common transformations across your API ecosystem.
 Example: You can attach a flow hook to the pre-proxy flow in your environment to enforce authentication for all API proxies deployed in that environment.
 ```
 ---
