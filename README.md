@@ -54,5 +54,5 @@ Please ensure that your contributions adhere to the overall structure and format
 
 ## Acknowledgments 🙏
 
-Special thanks to all contributors who have helped improve this repository.
-
+> Acknowledgments [!NOTE]
+> Special thanks to all contributors who have helped improve this repository.
