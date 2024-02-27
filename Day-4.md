@@ -173,19 +173,61 @@ As per xyz company standard & downstream standard
 ```
 ---
 ---
-|12. Explain REST|
+|12. key factors of API design|
 |:------------|
-
+- Resource Orientation: Use nouns, not verbs, for endpoints.
+- HTTP Methods: Map actions to correct HTTP methods.
+- Parameters: Use query/path parameters for filtering/sorting.
+- HTTP Status Codes: Return correct codes (200, 400, etc).
+- Versioning: Strategically version your API for evolution.
+- Pagination: Manage large datasets with pagination.
+- Data Formats: Support standard formats (JSON, XML).
+- Error Handling: Provide clear and informative error messages.
+- OpenAPI (Swagger): Define API using OpenAPI specifications.
 ---
 ---
-|13. What is oauth2?|
+|13. Explain Two-Way SSL?|
 |:------------|
+```
+Two-Way SSL: A Secure Handshake
+Two-way SSL, also known as mutual authentication, goes beyond the traditional SSL/TLS setup by offering an additional layer of security. Here's how it works:
 
+1. Mutual Verification:
+-Both the client (e.g., your web browser) and the server (e.g., the website you're visiting) exchange certificates containing their public keys.
+-Each party then uses their private key to digitally sign the received certificate, verifying the other's authenticity.
+
+2. Enhanced Security:
+-Compared to one-way SSL, where only the server authenticates itself, two-way SSL provides an additional layer of trust by confirming the client's identity as well.
+-This helps prevent unauthorized access attempts and ensures you're communicating with the intended server, mitigating risks like man-in-the-middle attacks.
+
+3. Trusted Communication:
+-By establishing mutual trust, two-way SSL creates a secure communication channel where both parties can be confident about who they're interacting with.
+-This is especially valuable in scenarios where sensitive data exchange is involved, such as online banking or financial transactions.
+
+In essence, two-way SSL offers a more secure and reliable communication environment by ensuring both parties involved are legitimate and authorized to communicate.
+```
 ---
 ---
-|14. different grant types with deep explanation|
+|14. Apigee architecture|
 |:------------|
+```
+breakdown of the Apigee architecture and components, aiming for greater clarity and a focus on the key functionalities:
 
+1] Core Components:
+-Message Router: The initial entry point for API traffic. It routes requests to the correct Message Processor, handling load balancing for efficiency.
+-Message Processor: The heart of API processing. It executes Apigee policies, mediates backend calls, formats responses, and enforces security and management rules.
+-Cassandra Database: A scalable NoSQL database that stores essential runtime data such as API configurations, OAuth tokens, and application keys.
+-ZooKeeper: Coordinates distributed configuration information across Apigee components, ensuring consistency and notifying about updates.
+
+2] Management and Development Tools:
+-Management Server: Handles administrative API requests, provides a central management interface, and interacts with the UI.
+-Apigee UI: A user-friendly web-based interface for building API proxies, managing API products, and handling developer interactions.
+-OpenLDAP (Optional): Can be used for user and role management within the Apigee system.
+
+3] Additional Notes:
+-Apigee's architecture is designed to be scalable and highly available, supporting the needs of large-scale API deployments.
+-The customizable nature of Apigee policies allows for tailoring API behavior to fit specific use cases.
+```
 ---
 ---
 |15. difference between oauth 1.0 and oauth 2.0|
@@ -216,6 +258,7 @@ As per xyz company standard & downstream standard
 |20. Some more Interview topics|
 |:--------------------|
 ```
+- What is northbound & sounthbound 
 - Raise fault vs route rules 
 - removal of api key before sending it to backend 
 - diff security proxies 
