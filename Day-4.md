@@ -94,6 +94,7 @@ Methodology: Agile [Release--->sprint]
 - CERT PROD deployments | support regional deployments for Spring Boot microservices
 - after accessful deployment code merging
 - [branching strategies, API Naming conventins, Security standards need to be followed along with everything]
+- support for Disaster Recovery (DR) Test plan
 ```
 ---
 ---
