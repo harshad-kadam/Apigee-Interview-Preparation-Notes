@@ -577,7 +577,7 @@ Regulatory compliance: Ensure compliance with relevant regulations by capturing 
 - Oauth &  different grant types,
 - SF in detail,
 - Which Apigee version you worked on (SAAS, Hybrid, On-Prem, Multi-cloud)
-- about JS policy that you worked on ( api versioning implementation logic | complex payload parsing | logging field's value's customization | best suited for any logic that can not be implemented with apigee out of the box policies)
+- about JS policy that you worked on ( api versioning implementation logic | complex payload parsing | logging field's value's customization | best suited for any logic that can not be implemented with apigee out of the box policies) 
 ```
 ---
 > [!NOTE]
