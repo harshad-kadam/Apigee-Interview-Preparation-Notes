@@ -1,7 +1,7 @@
 # :label::bookmark: Apigee-Interview-Preparation-Notes DAY 4 :high_brightness:
 ---
 ---
-|1. How many policies in one proxy:|
+|1. How many policies in one proxy:| 
 |:------------|
 - varying based on proxy average min 10 to max 45-50, some proxies are having 70+, that was actually wrong aproach of devlopment apigee is an gateway which shouldn't have heavy lifting logics/implementations. this was existing implementation 
 - many collaborative discussions happend to decide standards, whatever new proxies we are developing we are trying to avoid/reduce burden of heavy lifting at apigee side. 
